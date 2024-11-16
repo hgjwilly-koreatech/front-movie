@@ -1,12 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <link href="./src/styles/styles.css" rel="stylesheet">
   </head>
   <body>
-    여기에 기본 html 작성
+    <header>
+      <img id="title" src="./src/assets/logo.png">
+      <div id="search">
+        <input id="search-input" type="text" placeholder="검색">
+        <button id="search-button"><img src="./src/assets/search_button.png"></button>
+      </div>
+    </header>
+
+    <main>
+      <div id="grid">
+        <p id="grid-title">지금 인기있는 영화</p>
+
+        <div class="grid-item">
+          <img src="./src/assets/movie.png" />
+          <p>영화 제목~~~~ ~   ~ ~~~~~</p>
+          <div>
+            <p>평점</p>
+            <img src="./src/assets/star.svg">
+          </div>
+        </div>        
+        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
+        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
+        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
+        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
+        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
+        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
+        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
+        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
+        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
+        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
+        
+        <button>더보기</button>
+      </div>
+    </main>
+    <script src="./src/index.js"></script>
   </body>
 </html>

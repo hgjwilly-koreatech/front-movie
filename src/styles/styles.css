@@ -1,0 +1,292 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before, 
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+header{
+  margin: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #111111;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 32px;
+  padding-right: 32px;
+
+  position: fixed;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+#title{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#search{
+  width: 320px;
+  height: 44px;
+
+  position: relative;
+  
+}
+#search-input{  
+  width: 100%;
+  height: 100%;
+
+
+  padding-left: 10px;
+  padding-right: 40px;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+}
+#search-button{
+
+  width: 30px;
+  height: 30px;
+
+  background: none;
+  border: none;
+
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+#search-button img{
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: contain;
+}
+header::after { 
+  /* 솔직히 이건 몰라서 검색해서 함 */
+  /* 가상 요소로 그라데이션 효과 */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px; /* 헤더 바로 아래에 위치 */
+  width: 100%;
+  height: 8px; /* 그라데이션 높이 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), transparent);
+}
+
+main{
+  background-color: #111111;
+
+  padding-top: 60px;
+
+  height: 100%;
+
+}
+
+
+#grid{
+
+  display: grid; /* 그리드 컨테이너 */
+
+  grid-template-columns: repeat(4, 180px);
+  grid-template-rows: auto;
+
+  row-gap: 64px;
+  column-gap: 64px;
+
+  padding-top: 60px;
+  padding-bottom: 150px;
+
+  color: white;
+
+  justify-content: center;
+}
+#grid-title{
+  grid-column: span 4;
+  font-size: 34px;
+}
+.grid-item{
+  width: 180px;
+  height: 360px;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-size: 18px;
+}
+.grid-item img{
+  width: 180px;
+
+  object-fit: contain;
+
+  border-radius: 18px;
+}
+.grid-item>p{
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+}
+.grid-item div{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  width: 100%;
+  height: 27px;
+}
+.grid-item div img{
+  width: 20px;
+  height: 20px;
+
+  margin-left: 7px;
+  margin-right: 0px;
+}
+#grid button{
+  grid-column: span 4;
+
+  width: 100%;
+  height: 44px;
+
+  background-color: #F33F3F;
+  color: white;
+
+  border-radius: 8px;
+}
