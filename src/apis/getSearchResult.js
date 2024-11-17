@@ -17,7 +17,7 @@ function getSearchResult(keyword) {
 
 
     page += 1;
-    fetch(`https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(recentKeyword)}&include_adult=true&language=ko&page=${page}`, options)
+    fetch(`https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(recentKeyword)}&include_adult=false&language=ko&page=${page}`, options)
         .then(res => res.json())
         .then(data => {
             if(data.results.length === 0){
@@ -29,7 +29,6 @@ function getSearchResult(keyword) {
                     alert("더 이상 검색 결과가 없습니다.");
                     page -= 1;
                 }
-                throw new Error('No search result');
             }
             return data;
         })
@@ -38,5 +37,5 @@ function getSearchResult(keyword) {
         )
         .catch(error => 
             alert('Error',error)
-        );  
+        ); 
 }

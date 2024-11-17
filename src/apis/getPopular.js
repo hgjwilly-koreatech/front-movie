@@ -18,6 +18,5 @@ function getPopular() {
       console.error('Error:', error)
     )
 }
-
-getPopular();
 setStyle2();
+getPopular();

@@ -1,7 +1,14 @@
 
-const searchButton = document.querySelector("#search-button");
+
 searchButton.addEventListener("click", () =>{
     searchEvent();
+});
+
+
+searchInput.addEventListener("keydown", (e) => {
+    if(e.key === 'Enter'){
+        searchEvent();
+    }
 });
 
 
@@ -13,7 +20,6 @@ function searchEvent(){
     }
     else{
         removeGridContents(); // 기존의 gridItem을 모두 삭제
-        const title = document.querySelector("#grid-title");
         title.textContent = `'${keyword}' 검색 결과`; // 검색 결과 제목 변경
         getSearchResult(keyword); // 검색 결과를 가져옴
     }

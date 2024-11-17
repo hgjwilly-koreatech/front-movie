@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <img id="title" src="./src/assets/logo.png">
+      <img id="header-img" src="./src/assets/logo.png">
       <div id="search">
         <input id="search-input" type="text" placeholder="검색">
         <button id="search-button"><img src="./src/assets/search_button.png"></button>
@@ -25,15 +25,14 @@
       </div>
     </main>
     
-    <script src="./src/scripts/status.js"></script>
-    <script src="./src/scripts/removeGridContents.js"></script>
-    <script src="./src/scripts/addContents.js"></script>
-    
-    <script src="./src/scripts/changeStyle.js"></script>
+    <script src="./src/events/consts/events_consts.js"></script>
+    <script src="./src/setStyle/setStyle.js"></script>
+    <script src="./src/setElements/addContents.js"></script>
     <script src="./src/apis/getPopular.js"></script>
+    <script src="./src/setElements/removeGridContents.js"></script>
     <script src="./src/apis/getSearchResult.js"></script>
-    <script src="./src/scripts/searchEvent.js"></script>
-    <script src="./src/scripts/loadMoreEvent.js"></script>
-    
+    <script src="./src/events/loadMoreEvent.js"></script>
+    <script src="./src/events/searchEvent.js"></script>
+    <script src="./src/events/homeEvent.js"></script>
   </body>
 </html>
