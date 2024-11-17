@@ -6,13 +6,19 @@ const options = {
   }
 };
 
+let pageOfPopular = 0;
 
+function getPopular() {
+  pageOfPopular += 1;
 
-fetch('https://api.themoviedb.org/3/movie/popular?language=ko&page=1', options)
-  .then(response => response.json())
-  .then(data => { 
-    addContents(data)
-  })
-  .catch(error => 
-    console.error('Error:', error)
-  )
+  fetch(`https://api.themoviedb.org/3/movie/popular?language=ko&page=${pageOfPopular}`, options)
+    .then(response => response.json())
+    .then(data => { 
+      addContents(data)
+    })
+    .catch(error => 
+      console.error('Error:', error)
+    )
+}
+
+getPopular();

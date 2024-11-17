@@ -153,7 +153,6 @@ header{
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
 #search{
   width: 320px;
   height: 44px;
@@ -212,6 +211,8 @@ main{
   background-color: #111111;
 
   padding-top: 60px;
+  
+  min-height: 100vh;
 
 }
 
@@ -232,6 +233,7 @@ main{
   color: white;
 
   justify-content: center;
+
 }
 #grid-title{
   grid-column: span 4;
