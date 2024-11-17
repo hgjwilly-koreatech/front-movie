@@ -213,14 +213,12 @@ main{
 
   padding-top: 60px;
 
-  height: 100%;
-
 }
 
 
 #grid{
 
-  display: grid; /* 그리드 컨테이너 */
+  display: grid; 
 
   grid-template-columns: repeat(4, 180px);
   grid-template-rows: auto;
@@ -253,8 +251,9 @@ main{
 }
 .grid-item img{
   width: 180px;
+  height: 270px;
 
-  object-fit: contain;
+  object-fit: fill;
 
   border-radius: 18px;
 }

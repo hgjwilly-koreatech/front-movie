@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link href="./src/styles/styles.css" rel="stylesheet">
+    <link href="./src/styles/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -20,29 +20,20 @@
     <main>
       <div id="grid">
         <p id="grid-title">지금 인기있는 영화</p>
-
-        <div class="grid-item">
-          <img src="./src/assets/movie.png" />
-          <p>영화 제목~~~~ ~   ~ ~~~~~</p>
-          <div>
-            <p>평점</p>
-            <img src="./src/assets/star.svg">
-          </div>
-        </div>        
-        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
-        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
-        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
-        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
-        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
-        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
-        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
-        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
-        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
-        <div class="grid-item"><img src="./src/assets/movie.png" /><p>영화 제목</p><div><p>평점</p><img src="./src/assets/star.svg"></div></div>
-        
-        <button>더보기</button>
+        <!--contents-->
+        <button id="load-more-button">더보기</button>
       </div>
     </main>
-    <script src="./src/index.js"></script>
+    
+    
+    <script src="./src/scripts/removeGridContents.js"></script>
+
+
+    
+    <script src="./src/scripts/addContents.js"></script>
+    <script src="./src/scripts/changeStyle.js"></script>
+    <script src="./src/apis/getPopular.js"></script>
+    <script src="./src/apis/getSearchResult.js"></script>
+    <script src="./src/scripts/searchEvent.js"></script>
   </body>
 </html>
