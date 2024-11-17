@@ -7,7 +7,9 @@ const options = {
 };
 
 function getPopular() {
+
   page += 1;
+  showLoadMoreButton();
 
   fetch(`https://api.themoviedb.org/3/movie/popular?language=ko&page=${page}`, options)
     .then(response => response.json())

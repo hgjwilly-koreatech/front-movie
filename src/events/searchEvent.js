@@ -19,7 +19,6 @@ function searchEvent(){
         alert("검색어를 입력해주세요.");
     }
     else{
-        removeGridContents(); // 기존의 gridItem을 모두 삭제
         title.textContent = `'${keyword}' 검색 결과`; // 검색 결과 제목 변경
         getSearchResult(keyword); // 검색 결과를 가져옴
     }
