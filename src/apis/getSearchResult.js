@@ -1,29 +1,42 @@
 
-let pageOfSearch = 0;
-let recentEncodedKeyword = "";
-let isSearch = false;
+let recentKeyword = "";    
 
-function getSearchResult(){
-    getSearchResult(recentEncodedKeyword);
+function getMoreSearchResult() {
+    getSearchResult(recentKeyword);
+
 }
-
 function getSearchResult(keyword) {
-    isSearch = true;
 
-    pageOfSearch += 1;
-    keyword = encodeURIComponent(keyword);
-
-    if (keyword !== recentEncodedKeyword) {
-        pageOfSearch = 1;
-        recentEncodedKeyword = keyword;
+    if(!isSearch){
+        isSearch = true;
+    }
+    if(recentKeyword !== keyword){
+        page = 0;
+        recentKeyword = keyword;
     }
 
-    fetch(`https://api.themoviedb.org/3/search/movie?query=${recentEncodedKeyword}&include_adult=true&language=ko&page=${pageOfSearch}`, options)
+
+    page += 1;
+    fetch(`https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(recentKeyword)}&include_adult=true&language=ko&page=${page}`, options)
         .then(res => res.json())
+        .then(data => {
+            if(data.results.length === 0){
+                if(page === 1){
+                    alert( "검색 결과가 없습니다.");
+                    page = 0;
+                }
+                else if(page > 1){
+                    alert("더 이상 검색 결과가 없습니다.");
+                    page -= 1;
+                }
+                throw new Error('No search result');
+            }
+            return data;
+        })
         .then(data =>
             addContents(data)
         )
         .catch(error => 
-            console.error('Error:',error)
+            alert('Error',error)
         );  
 }

@@ -1,21 +1,22 @@
 console.log(detectDeviceType());
 
-switch (detectDeviceType()) {
-  case "mobile":
-    setStyle("mobile");
-    break;        
-  case "tablet":
-    setStyle("tablet");
-    break;
-  case "pc":
-    break;
-}
-    
+function setStyle2(){
+  switch (detectDeviceType()) {
+    case "mobile":
+      setStyle("mobile");
+      break;        
+    case "tablet":
+      setStyle("tablet");
+      break;
+    case "pc":
+      break;
+  }
+}    
 
 function detectDeviceType() {
-  if (window.matchMedia("(max-width: 758px)").matches) {
+  if (window.matchMedia("(max-width: 765px)").matches) {
     return "mobile";
-  } else if (window.matchMedia("(min-width: 759px) and (max-width: 1024px)").matches) {
+  } else if (window.matchMedia("(min-width: 768px) and (max-width: 1023px)").matches) {
     return "tablet";
   } else {
     return "pc";
@@ -39,14 +40,15 @@ function setStyle(deviceType) {
   const gridItem = document.querySelectorAll(".grid-item");
   gridItem.forEach(item => {
     item.style.width = (deviceType == "mobile") ? "140px" : "180px";
-    item.style.height = (deviceType == "mobile") ? "280px" : "360px";
+    item.style.height = (deviceType == "mobile") ? "300px" : "360px";
     item.style.fontSize = (deviceType == "mobile") ? "16px" : "18px";
   });
   const itemImage = document.querySelectorAll(".grid-item img");
   itemImage.forEach(item => {
     item.style.borderRadius = "15px";
     item.style.width = (deviceType == "mobile") ? "140px" : "180px"; /* 적용 안되는 문제? */
-    item.style.height = (deviceType == "mobile") ? "210px" : "270px";
+    item.style.height = (deviceType == "mobile") ? "220px" : "270px";
+    
   });
   const gridImage = document.querySelectorAll(".grid-item div");
   gridImage.forEach(item => {

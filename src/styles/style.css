@@ -250,11 +250,13 @@ main{
   justify-content: space-between;
 
   font-size: 18px;
+
+  box-sizing: border-box;
 }
 .grid-item img{
   width: 180px;
   height: 270px;
-
+  
   object-fit: fill;
 
   border-radius: 18px;

@@ -6,12 +6,10 @@ const options = {
   }
 };
 
-let pageOfPopular = 0;
-
 function getPopular() {
-  pageOfPopular += 1;
+  page += 1;
 
-  fetch(`https://api.themoviedb.org/3/movie/popular?language=ko&page=${pageOfPopular}`, options)
+  fetch(`https://api.themoviedb.org/3/movie/popular?language=ko&page=${page}`, options)
     .then(response => response.json())
     .then(data => { 
       addContents(data)
@@ -22,3 +20,4 @@ function getPopular() {
 }
 
 getPopular();
+setStyle2();

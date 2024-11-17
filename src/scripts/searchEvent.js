@@ -8,7 +8,7 @@ searchButton.addEventListener("click", () =>{
 function searchEvent(){
 
     let keyword = document.querySelector("#search-input").value;
-    if(keyword === undefined){ // 검색어가 없을 경우{
+    if(keyword == ''){ // 검색어가 없을 경우{
         alert("검색어를 입력해주세요.");
     }
     else{
