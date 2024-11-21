@@ -1,0 +1,79 @@
+@import url(main_grid_item.css);
+
+#grid{
+
+  display: grid; 
+
+  grid-template-columns: repeat(4, 180px);
+  grid-template-rows: auto;
+
+  row-gap: 64px;
+  column-gap: 64px;
+
+  padding-top: 60px;
+  padding-bottom: 150px;
+
+  color: white;
+
+  justify-content: center;
+
+}
+
+
+
+#grid_title{
+  grid-column: span 4;
+  font-size: 34px;
+}
+
+#grid_load_more_button{
+  grid-column: span 4;
+
+  width: 100%;
+  height: 44px;
+
+  background-color: #F33F3F;
+  color: white;
+
+  border-radius: 8px;
+}
+
+
+@media (max-width: 765px){ /* Mobile */
+  #grid{
+    grid-template-columns: repeat(2, 160px);
+
+    row-gap: 36px;
+    column-gap: 32px;
+  
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  #grid_title{
+    grid-column: span 2;
+    font-size: 28px;
+  }
+  #grid_load_more_button{
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 766px) and (max-width: 1020px){ /* Tablet */
+  #grid{
+    grid-template-columns: repeat(3, 180px);
+
+    column-gap: 55px;
+  
+    padding-top: 48px;
+    padding-bottom: 70px;
+  }
+  #grid_title{
+    grid-column: span 3;
+    font-size: 28px;
+  }
+  #grid_load_more_button{
+    grid-column: span 3;
+  }
+}
+
+
